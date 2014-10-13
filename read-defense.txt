@@ -1,0 +1,6 @@
+Grant David Meadors
+02014-10-13 (JD 2456944)
+Defense Talk
+
+Git directory for my thesis defense!
+
