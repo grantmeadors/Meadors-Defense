@@ -472,24 +472,6 @@ $h(t)=\hat{s}(t)-\frac{1}{2}\left(g_{A}\left[1+\cos\frac{2\pi t}{1024\textup{\te
 <1>
 
 \begin{figure}
-\caption{\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-MICH-coh}\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-PRC-coh}}
-
-
-Coherence between h(t) and
-
-MICH (left), PRC (right):
-
-statistically-significant coherence justifies TF fit
-
-(sample: 2010-03-21T0000Z)
-\end{figure}
-
-\end{onlyenv}%{}
-
-\begin{onlyenv}%{}
-<2>
-
-\begin{figure}
 \caption{\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-MICH-fit}\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-PRC-fit}}
 
 
@@ -498,46 +480,6 @@ Transfer function (TF) fit for h(t) with
 MICH (left), PRC (right):
 
 TF smoothed before fitting to coherent band using Vectfit
-
-(sample: 2010-03-21T0000Z)
-\end{figure}
-
-\end{onlyenv}%{}
-
-\begin{onlyenv}%{}
-<3>
-
-\begin{figure}
-
-
-\caption{\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-MICH-many}\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-PRC-many}}
-
-
-Variation in TF fits over science segment
-
-Each color is one 1024 s window
-
-MICH (left), PRC (right)
-
-(sample: 2010-03-20T2316Z/2010-03-21T0407Z)
-\end{figure}
-
-\end{onlyenv}%{}
-
-\begin{onlyenv}%{}
-<4>
-
-\begin{figure}
-
-
-\caption{\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-MICH-sub}\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-PRC-sub}}
-
-
-Estimated subtraction in amplitude spectral density (ASD)
-
-(equal to TF times noise)
-
-MICH (left), PRC (right)
 
 (sample: 2010-03-21T0000Z)
 \end{figure}
@@ -976,7 +918,7 @@ $\textup{}$
 \begin{description}
 \item[{Searched frequencies}] [434.5,436.5] \& [620.5,622.5] Hz
 \end{description}
-$\rightarrow$ TwoSpect analysis, heatmaps done on $\nu_0$, $r$-mode\\
+$\rightarrow$ TwoSpect analysis, heatmaps done on $\nu_0$, $r$-mode, $2\nu_0$\\
 $\rightarrow$ Upper limits will be made
 
 
@@ -988,7 +930,7 @@ $\rightarrow$ Upper limits will be made
 \item \emph{Coherently combine multiple interferometer outputs: }\\
 Add complex Fourier coefficients (with phase corrections)\\
 to create a multi-detector statistic\\
-\textbf{Well under way: see later talk by Evan Goetz}
+(Just implemented by E. Goetz, soon to be tested)
 \item \emph{Elliptical polarization:}\\
 search antenna pattern weightings corresponding to\\
 elliptical polarization -- better sensitivity
@@ -1003,20 +945,29 @@ template and doubly Fourier-transformed data
 
 \lyxframeend{}\lyxframe{Summary}
 
-\textbf{CONCLUSIONS (change)}
-\begin{exampleblock}{}
-{\large How does the fabric of the universe \textit{change?}}\newline
---How does gravity change?\newline
-$\textup{    }$(e.g., how soon would we stop orbiting the Sun if it vanished?)\newline
---Does gravity not travel instantaneously?\newline
---Can ripples of \textit{gravity's travel} be sensed?
-\end{exampleblock}
+%\textbf{CONCLUSIONS (change)}
+%\begin{exampleblock}{}
+%{\large How does the fabric of the universe \textit{change?}}\newline
+%--How does gravity change?\newline
+%$\textup{    }$(e.g., how soon would we stop orbiting the Sun if it vanished?)\newline
+%--Does gravity not travel instantaneously?\newline
+%--Can ripples of \textit{gravity's travel} be sensed?
+%\end{exampleblock}
 
 \emph{Binary search summary}
 \begin{itemize}
-\item TwoSpect well-suited to Scorpius X-1 mock data challenge
-\item S6 Scorpius X-1 and J1751-305 searches underway, part done
+\item TwoSpect `won' Scorpius X-1 mock data challenge
+\item S6 Scorpius X-1 and J1751-305 search processing done
 \item Directed binary searches: becoming more sensitive
+\end{itemize}
+
+\emph{LIGO in the future}
+\begin{itemize}
+\item Advanced LIGO now being commissioned
+\item Author has done filtering, squeezing to enhance LIGO, \\
+  methods for finding low mass X-ray binaries
+\item Coming soon: limits for Scorpius X-1, then \\
+  even better for Advanced LIGO's first run in 2015
 \end{itemize}
 
 
@@ -1025,12 +976,12 @@ $\textup{    }$(e.g., how soon would we stop orbiting the Sun if it vanished?)\n
 
 Thanks to the University of Michigan, Keith Riles
 for six years of guidance, Evan Goetz for 
-introducing TwoSpect, Keita Kawabe for launching
+beginning TwoSpect, Keita Kawabe for launching
 the filtering project, everyone on the squeezing
-project, and Chris Messenger for
-leading Sco X-1 MDC, AEI for current \&
-future support and computing, and
-the LVC and National Science Foundation.
+project, Chris Messenger for
+leading the Scorpius X-1 MDC, 
+\\ AEI for current \& future support and computing, and the \\
+LVC-Virgo Collaboration \& National Science Foundation.
 
 
 \lyxframeend{}\lyxframe{Bibliography}
@@ -1133,6 +1084,69 @@ Implemented damping in MICH\_DAMP (MD) path to output
 \end{figure}
 
 \end{onlyenv}%{}
+
+
+\lyxframeend{}\subsection*{Transfer function filters}
+\lyxframeend{}\lyxframe{Transfer function filters}
+
+\begin{onlyenv}%{}
+<1>
+
+\begin{figure}
+\caption{\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-MICH-coh}\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-PRC-coh}}
+
+
+Coherence between h(t) and
+
+MICH (left), PRC (right):
+
+statistically-significant coherence justifies TF fit
+
+(sample: 2010-03-21T0000Z)
+\end{figure}
+
+\end{onlyenv}%{}
+
+\begin{onlyenv}%{}
+<2>
+
+\begin{figure}
+
+
+\caption{\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-MICH-many}\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-PRC-many}}
+
+
+Variation in TF fits over science segment
+
+Each color is one 1024 s window
+
+MICH (left), PRC (right)
+
+(sample: 2010-03-20T2316Z/2010-03-21T0407Z)
+\end{figure}
+
+\end{onlyenv}%{}
+
+\begin{onlyenv}%{}
+<3>
+
+\begin{figure}
+
+
+\caption{\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-MICH-sub}\protect\includegraphics[width=0.45\paperwidth,height=0.55\paperheight]{plots/clip-PRC-sub}}
+
+
+Estimated subtraction in amplitude spectral density (ASD)
+
+(equal to TF times noise)
+
+MICH (left), PRC (right)
+
+(sample: 2010-03-21T0000Z)
+\end{figure}
+
+\end{onlyenv}%{}
+
 
 
 \lyxframeend{}\lyxframe{Neutron stars in binary systems}
