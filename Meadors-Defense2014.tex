@@ -647,6 +647,45 @@ method after Allen, Hua and Ottewill.
 
 \lyxframeend{}\section{Searches for neutron stars in binary systems}
 
+\lyxframeend{}\lyxframe{Neutron stars in binary systems}
+\begin{definition}%{}
+Neutron star with a partner in a binary system, 
+
+e.g., a low-mass X-ray binary (LMXB)\end{definition}%{}
+\begin{example}%{}
+Scorpius X-1
+\end{example}%{}
+Potential candidates for gravitational waves:
+\begin{itemize}
+\item Longer lifetime than isolated sources (recycling)
+\item Ellipticity \& hot spots due to accretion
+\item Torque balance hypothesis (Papaloizou \& Pringle 1978, Wagoner 1984):
+\item \emph{bright ms pulsars}
+\item Speed limit? (Chakrabarty 2003)
+\end{itemize}
+
+
+
+\lyxframeend{}\lyxframe{Scorpius X-1 parameters}
+\begin{itemize}
+\item Distance: 9000 light-years (2.8 kpc)
+\item Eccentricity: $<3\times10^{-3}$
+\item Sky location: $\alpha$=16h19m55.1s, $\delta$=-15d38m24.9s
+\item X-ray luminosity: 2.3 $\times10^{31}$W, 60000 $L_{Sol}$
+\item First LIGO search: Phys. Rev. D 76 (2007) 082001; gr-qc/0605028
+\item Torque-balance (Papaloizou and Pringle 1978) equation (Wagoner 1984),
+generally:
+\end{itemize}
+\[
+h_{0}=5\times10^{-27}\left(\frac{300\textup{Hz}}{\nu}\right)^{1/2}\left(\frac{F_{\times}}{10^{-8}\textup{erg cm}^{-2}\textup{s}^{-1}}\right)^{1/2}
+\]
+
+\begin{itemize}
+\item Sco X-1:
+\end{itemize}
+\[
+h_{0}=3\times10^{-26}\left(\frac{540\textup{Hz}}{f}\right)^{1/2}
+\]
 
 \lyxframeend{}\lyxframe{TwoSpect algorithm for all-sky binary searches}
 
@@ -786,7 +825,7 @@ established signal \emph{threshold log10p-values}:\\
 
 \lyxframeend{}\lyxframe{Mock data challenge: correcting for unknown cos $\iota$}
 
-Circular effective $h_0 = h_0 [( [(1+\cos^2 \iota)/2]^2 + [\cos \iota]^2)/2]^{1/2}$
+Circular effective $h_0 = h_{0,\textup{ reported}} [( [(1+\cos^2 \iota)/2]^2 + [\cos \iota]^2)/2]^{1/2}$
 
 \begin{figure}
 \caption{\protect\includegraphics[width=0.45\paperwidth,height=0.45\paperheight]{plots/PlotHEffVsH0TrueWithLines.png}\protect\includegraphics[width=0.45\paperwidth,height=0.45\paperheight]{plots/PlotSigmaDiffVsH0Eff.png}}
@@ -807,24 +846,11 @@ non-detected shelf sets upper limit for $4.0 \times 10^{-24}$ noise
 \begin{figure}
 \caption{\protect\includegraphics[width=0.7\paperwidth,height=0.7\paperheight]{plots/ErrorFvsF.png}}
 Error in open-pulsar estimation of $f$, plotted vs $f$,\\
-sigma based on all detected open injections
+sigma based on all detected open injections\\
+($a \sin i$, $h_0$ similar)
 \end{figure}
 
-\lyxframeend{}\lyxframe{Mock data challenge: parameter estimation, $a \sin i$}
 
-\begin{figure}
-\caption{\protect\includegraphics[width=0.7\paperwidth,height=0.7\paperheight]{plots/ErrorAsinivsF.png}}
-Error in open-pulsar estimation of $a \sin i$, plotted vs $f$,\\
-sigma based on all detected open injections
-\end{figure}
-
-\lyxframeend{}\lyxframe{Mock data challenge: parameter estimation, $h_0$}
-
-\begin{figure}
-\caption{\protect\includegraphics[width=0.7\paperwidth,height=0.7\paperheight]{plots/Errorh0vsF.png}}
-Error in open-pulsar estimation of $h_0$, plotted vs $f$,\\
-sigma based on all detected open injections
-\end{figure}
 
 \lyxframeend{}\lyxframe{Mock data challenge: results}
 
@@ -916,7 +942,7 @@ $\textup{}$
 $\textup{}$
 
 \begin{description}
-\item[{Searched frequencies}] [434.5,436.5] \& [620.5,622.5] Hz
+\item[{Search frequencies}] [434.5,436.5], [620.5,622.5] \& [869.5,871.5] Hz
 \end{description}
 $\rightarrow$ TwoSpect analysis, heatmaps done on $\nu_0$, $r$-mode, $2\nu_0$\\
 $\rightarrow$ Upper limits will be made
@@ -1149,45 +1175,23 @@ MICH (left), PRC (right)
 
 
 
-\lyxframeend{}\lyxframe{Neutron stars in binary systems}
-\begin{definition}%{}
-Neutron star with a partner in a binary system, 
-
-e.g., a low-mass X-ray binary (LMXB)\end{definition}%{}
-\begin{example}%{}
-Scorpius X-1
-\end{example}%{}
-Potential candidates for gravitational waves:
-\begin{itemize}
-\item Longer lifetime than isolated sources (recycling)
-\item Ellipticity \& hot spots due to accretion
-\item Torque balance hypothesis (Papaloizou \& Pringle 1978, Wagoner 1984):
-\item \emph{bright ms pulsars}
-\item Speed limit? (Chakrabarty 2003)
-\end{itemize}
 
 
+\lyxframeend{}\lyxframe{Mock data challenge: parameter estimation, $a \sin i$}
 
-\lyxframeend{}\lyxframe{Scorpius X-1 parameters}
-\begin{itemize}
-\item Distance: 9000 light-years (2.8 kpc)
-\item Eccentricity: $<3\times10^{-3}$
-\item Sky location: $\alpha$=16h19m55.1s, $\delta$=-15d38m24.9s
-\item X-ray luminosity: 2.3 $\times10^{31}$W, 60000 $L_{Sol}$
-\item First LIGO search: Phys. Rev. D 76 (2007) 082001; gr-qc/0605028
-\item Torque-balance (Papaloizou and Pringle 1978) equation (Wagoner 1984),
-generally:
-\end{itemize}
-\[
-h_{0}=5\times10^{-27}\left(\frac{300\textup{Hz}}{\nu}\right)^{1/2}\left(\frac{F_{\times}}{10^{-8}\textup{erg cm}^{-2}\textup{s}^{-1}}\right)^{1/2}
-\]
+\begin{figure}
+\caption{\protect\includegraphics[width=0.7\paperwidth,height=0.7\paperheight]{plots/ErrorAsinivsF.png}}
+Error in open-pulsar estimation of $a \sin i$, plotted vs $f$,\\
+sigma based on all detected open injections
+\end{figure}
 
-\begin{itemize}
-\item Sco X-1:
-\end{itemize}
-\[
-h_{0}=3\times10^{-26}\left(\frac{540\textup{Hz}}{f}\right)^{1/2}
-\]
+\lyxframeend{}\lyxframe{Mock data challenge: parameter estimation, $h_0$}
+
+\begin{figure}
+\caption{\protect\includegraphics[width=0.7\paperwidth,height=0.7\paperheight]{plots/Errorh0vsF.png}}
+Error in open-pulsar estimation of $h_0$, plotted vs $f$,\\
+sigma based on all detected open injections
+\end{figure}
 
 \lyxframeend{}\lyxframe{Sky maps using exact templates}
 
